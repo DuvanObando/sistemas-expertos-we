@@ -86,16 +86,14 @@ sistemas-expertos-web/
 
 ## Autor
 
-**[Tu Nombre]**  
+**Duvan Obando**  
 Estudiante de Ingeniería/Computación  
 Universidad Manuela Beltrán
 
 ## Curso
 
-**Inteligencia Artificial**  
+**Sistemas Expertos**  
 Facultad de Ingeniería  
 Universidad Manuela Beltrán
 
-## Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
