@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión del Tiempo - Sistemas Expertos Web</title>
+    <link rel="stylesheet" href="../css/modulos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Sistemas Expertos Web</h1>
+            <p class="subtitle">Plataforma de Inteligencia Artificial — Expertos Inteligentes S.A.</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="module-container">
+            <a href="../index.html" class="back-link">Volver al menú</a>
+            
+            <div class="module-header">
+                <h2 class="module-title">⏰ Gestión del Tiempo</h2>
+                <p class="module-subtitle">Optimiza tu administración del tiempo y mejora tu productividad</p>
+            </div>
+
+            <form id="form-tiempo" class="expert-form">
+                <div class="form-group">
+                    <label class="form-label" for="sueno-horas">¿Cuántas horas duermes diariamente?</label>
+                    <input type="number" id="sueno-horas" name="sueno-horas" class="form-input" 
+                           min="0" max="24" step="0.5" placeholder="Ej: 7" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="trabajo-horas">¿Cuántas horas trabajas/estudias diariamente?</label>
+                    <input type="number" id="trabajo-horas" name="trabajo-horas" class="form-input" 
+                           min="0" max="24" step="0.5" placeholder="Ej: 8" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="ocio-horas">¿Cuántas horas dedicas al ocio/entretenimiento?</label>
+                    <input type="number" id="ocio-horas" name="ocio-horas" class="form-input" 
+                           min="0" max="24" step="0.5" placeholder="Ej: 2" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">¿Nivel de procrastinación?</label>
+                    <div class="form-radio-group">
+                        <label class="form-radio-label">
+                            <input type="radio" name="procrastinacion" value="alta" required>
+                            <span>Alta</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="procrastinacion" value="media" required>
+                            <span>Media</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="procrastinacion" value="baja" required>
+                            <span>Baja</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">¿Utilizas herramientas de organización?</label>
+                    <div class="form-radio-group">
+                        <label class="form-radio-label">
+                            <input type="radio" name="herramientas" value="si" required>
+                            <span>Sí</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="herramientas" value="no" required>
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-primary">Ejecutar Sistema Experto</button>
+                </div>
+            </form>
+
+            <div id="resultados" class="results-container">
+                <h3 class="result-title">Análisis de Gestión del Tiempo</h3>
+                
+                <div class="result-diagnosis">
+                    <strong id="diagnostico">Diagnóstico:</strong>
+                    <p id="recomendacion" class="result-recommendation"></p>
+                </div>
+
+                <h4 class="rules-title">Reglas Activadas</h4>
+                <ul id="reglas-activadas" class="rules-list">
+                    <!-- Las reglas se insertarán aquí dinámicamente -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Expertos Inteligentes S.A. | Curso de Inteligencia Artificial | Universidad Manuela Beltrán</p>
+        </div>
+    </footer>
+
+    <script src="../js/tiempo.js"></script>
+</body>
+</html>

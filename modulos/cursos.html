@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Cursos - Sistemas Expertos Web</title>
+    <link rel="stylesheet" href="../css/modulos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Sistemas Expertos Web</h1>
+            <p class="subtitle">Plataforma de Inteligencia Artificial — Expertos Inteligentes S.A.</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="module-container">
+            <a href="../index.html" class="back-link">Volver al menú</a>
+            
+            <div class="module-header">
+                <h2 class="module-title">📚 Selección de Cursos</h2>
+                <p class="module-subtitle">Encuentra los cursos ideales según tus intereses y perfil académico</p>
+            </div>
+
+            <form id="form-cursos" class="expert-form">
+                <div class="form-group">
+                    <label class="form-label" for="interes">¿Área de interés principal?</label>
+                    <select id="interes" name="interes" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="tecnología">Tecnología</option>
+                        <option value="humanidades">Humanidades</option>
+                        <option value="ciencias">Ciencias</option>
+                        <option value="artes">Artes</option>
+                        <option value="negocios">Negocios</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="promedio">¿Promedio académico?</label>
+                    <select id="promedio" name="promedio" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="alto">Alto (4.0+)</option>
+                        <option value="medio">Medio (3.0-3.9)</option>
+                        <option value="bajo">Bajo (<3.0)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="carga">¿Carga académica que puedes manejar?</label>
+                    <select id="carga" name="carga" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="alta">Alta (más de 5 cursos)</option>
+                        <option value="media">Media (3-5 cursos)</option>
+                        <option value="baja">Baja (1-2 cursos)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">¿Modalidad preferida?</label>
+                    <div class="form-radio-group">
+                        <label class="form-radio-label">
+                            <input type="radio" name="modalidad" value="presencial" required>
+                            <span>Presencial</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="modalidad" value="virtual" required>
+                            <span>Virtual</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="ingles">¿Nivel de inglés?</label>
+                    <select id="ingles" name="ingles" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="alto">Alto (B2+)</option>
+                        <option value="medio">Medio (B1)</option>
+                        <option value="bajo">Bajo (A2 o menos)</option>
+                    </select>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-primary">Ejecutar Sistema Experto</button>
+                </div>
+            </form>
+
+            <div id="resultados" class="results-container">
+                <h3 class="result-title">Recomendaciones de Cursos</h3>
+                
+                <div class="result-diagnosis">
+                    <strong id="diagnostico">Recomendación:</strong>
+                    <p id="recomendacion" class="result-recommendation"></p>
+                </div>
+
+                <h4 class="rules-title">Reglas Activadas</h4>
+                <ul id="reglas-activadas" class="rules-list">
+                    <!-- Las reglas se insertarán aquí dinámicamente -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Expertos Inteligentes S.A. | Curso de Inteligencia Artificial | Universidad Manuela Beltrán</p>
+        </div>
+    </footer>
+
+    <script src="../js/cursos.js"></script>
+</body>
+</html>

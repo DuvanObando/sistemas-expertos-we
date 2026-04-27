@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educativo Adaptativo - Sistemas Expertos Web</title>
+    <link rel="stylesheet" href="../css/modulos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Sistemas Expertos Web</h1>
+            <p class="subtitle">Plataforma de Inteligencia Artificial — Expertos Inteligentes S.A.</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="module-container">
+            <a href="../index.html" class="back-link">Volver al menú</a>
+            
+            <div class="module-header">
+                <h2 class="module-title">📚 Educativo Adaptativo</h2>
+                <p class="module-subtitle">Personaliza tu estrategia de aprendizaje según tu estilo y preferencias</p>
+            </div>
+
+            <form id="form-educativo" class="expert-form">
+                <div class="form-group">
+                    <label class="form-label" for="estilo">¿Estilo de aprendizaje predominante?</label>
+                    <select id="estilo" name="estilo" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="visual">Visual</option>
+                        <option value="auditivo">Auditivo</option>
+                        <option value="kinestésico">Kinestésico</option>
+                        <option value="lectura">Lectura/escritura</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="nivel">¿Nivel de conocimiento actual?</label>
+                    <select id="nivel" name="nivel" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="principiante">Principiante</option>
+                        <option value="intermedio">Intermedio</option>
+                        <option value="avanzado">Avanzado</option>
+                        <option value="experto">Experto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="tiempo">¿Tiempo disponible para estudiar?</label>
+                    <select id="tiempo" name="tiempo" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="menos 1">Menos de 1 hora/día</option>
+                        <option value="1-2">1-2 horas/día</option>
+                        <option value="2-4">2-4 horas/día</option>
+                        <option value="más 4">Más de 4 horas/día</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">¿Tipo de contenido preferido?</label>
+                    <div class="form-radio-group">
+                        <label class="form-radio-label">
+                            <input type="radio" name="contenido" value="teórico" required>
+                            <span>Teórico</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="contenido" value="práctico" required>
+                            <span>Práctico</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="contenido" value="mixto" required>
+                            <span>Mixto</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">¿Motivación principal?</label>
+                    <div class="form-radio-group">
+                        <label class="form-radio-label">
+                            <input type="radio" name="motivacion" value="certificación" required>
+                            <span>Certificación</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="motivacion" value="curiosidad" required>
+                            <span>Curiosidad personal</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="motivacion" value="profesional" required>
+                            <span>Desarrollo profesional</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="tema">¿Área de interés principal?</label>
+                    <select id="tema" name="tema" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="tecnología">Tecnología</option>
+                        <option value="negocios">Negocios</option>
+                        <option value="arte">Arte y creatividad</option>
+                        <option value="ciencias">Ciencias</option>
+                        <option value="idiomas">Idiomas</option>
+                    </select>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-primary">Ejecutar Sistema Experto</button>
+                </div>
+            </form>
+
+            <div id="resultados" class="results-container">
+                <h3 class="result-title">Plan de Aprendizaje Personalizado</h3>
+                
+                <div class="result-diagnosis">
+                    <strong id="diagnostico">Estrategia recomendada:</strong>
+                    <p id="recomendacion" class="result-recommendation"></p>
+                </div>
+
+                <h4 class="rules-title">Reglas Activadas</h4>
+                <ul id="reglas-activadas" class="rules-list">
+                    <!-- Las reglas se insertarán aquí dinámicamente -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Expertos Inteligentes S.A. | Curso de Inteligencia Artificial | Universidad Manuela Beltrán</p>
+        </div>
+    </footer>
+
+    <script src="../js/educativo.js"></script>
+</body>
+</html>

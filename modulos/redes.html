@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociales - Sistemas Expertos Web</title>
+    <link rel="stylesheet" href="../css/modulos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Sistemas Expertos Web</h1>
+            <p class="subtitle">Plataforma de Inteligencia Artificial — Expertos Inteligentes S.A.</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="module-container">
+            <a href="../index.html" class="back-link">Volver al menú</a>
+            
+            <div class="module-header">
+                <h2 class="module-title">📱 Redes Sociales</h2>
+                <p class="module-subtitle">Optimiza tu estrategia de contenido en redes sociales</p>
+            </div>
+
+            <form id="form-redes" class="expert-form">
+                <div class="form-group">
+                    <label class="form-label" for="plataforma">¿Plataforma principal?</label>
+                    <select id="plataforma" name="plataforma" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="TikTok">TikTok</option>
+                        <option value="YouTube">YouTube</option>
+                        <option value="LinkedIn">LinkedIn</option>
+                        <option value="Facebook">Facebook</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="publico">¿Público objetivo?</label>
+                    <select id="publico" name="publico" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="jóvenes">Jóvenes (13-25 años)</option>
+                        <option value="adultos">Adultos (26-45 años)</option>
+                        <option value="profesionales">Profesionales (todas las edades)</option>
+                        <option value="mixto">Mixto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="tipo">¿Tipo de contenido?</label>
+                    <select id="tipo" name="tipo" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="educativo">Educativo</option>
+                        <option value="entretenimiento">Entretenimiento</option>
+                        <option value="comercial">Comercial</option>
+                        <option value="personal">Personal</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">¿Frecuencia de publicación?</label>
+                    <div class="form-radio-group">
+                        <label class="form-radio-label">
+                            <input type="radio" name="frecuencia" value="alta" required>
+                            <span>Alta (diaria)</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="frecuencia" value="media" required>
+                            <span>Media (3-4 por semana)</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="frecuencia" value="baja" required>
+                            <span>Baja (1-2 por semana)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="objetivo">¿Objetivo principal?</label>
+                    <select id="objetivo" name="objetivo" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="crecimiento">Crecimiento de seguidores</option>
+                        <option value="ventas">Generar ventas</option>
+                        <option value="marca personal">Construir marca personal</option>
+                    </select>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-primary">Ejecutar Sistema Experto</button>
+                </div>
+            </form>
+
+            <div id="resultados" class="results-container">
+                <h3 class="result-title">Estrategia de Redes Sociales</h3>
+                
+                <div class="result-diagnosis">
+                    <strong id="diagnostico">Estrategia recomendada:</strong>
+                    <p id="recomendacion" class="result-recommendation"></p>
+                </div>
+
+                <h4 class="rules-title">Reglas Activadas</h4>
+                <ul id="reglas-activadas" class="rules-list">
+                    <!-- Las reglas se insertarán aquí dinámicamente -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Expertos Inteligentes S.A. | Curso de Inteligencia Artificial | Universidad Manuela Beltrán</p>
+        </div>
+    </footer>
+
+    <script src="../js/redes.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimentación Deportiva - Sistemas Expertos Web</title>
+    <link rel="stylesheet" href="../css/modulos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Sistemas Expertos Web</h1>
+            <p class="subtitle">Plataforma de Inteligencia Artificial — Expertos Inteligentes S.A.</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="module-container">
+            <a href="../index.html" class="back-link">Volver al menú</a>
+            
+            <div class="module-header">
+                <h2 class="module-title">🏃 Alimentación Deportiva</h2>
+                <p class="module-subtitle">Optimiza tu nutrición según tus objetivos deportivos</p>
+            </div>
+
+            <form id="form-deportiva" class="expert-form">
+                <div class="form-group">
+                    <label class="form-label" for="objetivo">¿Objetivo deportivo?</label>
+                    <select id="objetivo" name="objetivo" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="ganar masa">Ganar masa muscular</option>
+                        <option value="perder peso">Perder peso</option>
+                        <option value="rendimiento">Mejorar rendimiento</option>
+                        <option value="mantener">Mantener peso</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="frecuencia">¿Frecuencia de entrenamiento?</label>
+                    <select id="frecuencia" name="frecuencia" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="baja">Baja (1-2 días/semana)</option>
+                        <option value="media">Media (3-4 días/semana)</option>
+                        <option value="alta">Alta (5-7 días/semana)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="intensidad">¿Intensidad del ejercicio?</label>
+                    <select id="intensidad" name="intensidad" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="ligera">Ligera</option>
+                        <option value="moderada">Moderada</option>
+                        <option value="intensa">Intensa</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">¿Restricciones alimenticias?</label>
+                    <div class="form-radio-group">
+                        <label class="form-radio-label">
+                            <input type="radio" name="restricciones" value="ninguna" required>
+                            <span>Ninguna</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="restricciones" value="vegetariano" required>
+                            <span>Vegetariano</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="restricciones" value="vegano" required>
+                            <span>Vegano</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="restricciones" value="otras" required>
+                            <span>Otras</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="horario">¿Horario principal de entrenamiento?</label>
+                    <select id="horario" name="horario" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="mañana">Mañana</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noche">Noche</option>
+                    </select>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-primary">Ejecutar Sistema Experto</button>
+                </div>
+            </form>
+
+            <div id="resultados" class="results-container">
+                <h3 class="result-title">Plan Nutricional Deportivo</h3>
+                
+                <div class="result-diagnosis">
+                    <strong id="diagnostico">Plan recomendado:</strong>
+                    <p id="recomendacion" class="result-recommendation"></p>
+                </div>
+
+                <h4 class="rules-title">Reglas Activadas</h4>
+                <ul id="reglas-activadas" class="rules-list">
+                    <!-- Las reglas se insertarán aquí dinámicamente -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Expertos Inteligentes S.A. | Curso de Inteligencia Artificial | Universidad Manuela Beltrán</p>
+        </div>
+    </footer>
+
+    <script src="../js/deportiva.js"></script>
+</body>
+</html>

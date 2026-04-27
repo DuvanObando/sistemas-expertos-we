@@ -1,0 +1,372 @@
+/* Estilos comunes para todos los módulos */
+
+/* Importar estilos base */
+@import url('styles.css');
+
+/* Layout del módulo */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.module-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.module-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.module-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+}
+
+.module-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Enlace de volver */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #3b82f6;
+}
+
+.back-link::before {
+    content: "←";
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Formularios */
+.expert-form {
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.form-select,
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+}
+
+.form-select:focus,
+.form-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-radio-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.form-radio-label:hover {
+    border-color: #3b82f6;
+    background: #f0f9ff;
+}
+
+.form-radio-label input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.form-radio-label input[type="radio"]:checked + span {
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+.form-radio-label:has(input[type="radio"]:checked) {
+    border-color: #1e3a8a;
+    background: #eff6ff;
+}
+
+/* Botones */
+.btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+.btn-secondary {
+    background: #6b7280;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #4b5563;
+}
+
+.btn-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Resultados */
+.results-container {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: 12px;
+    border: 2px solid #3b82f6;
+    display: none;
+}
+
+.results-container.show {
+    display: block;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.result-diagnosis {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #10b981;
+}
+
+.result-diagnosis strong {
+    color: #1e3a8a;
+    font-size: 1.1rem;
+}
+
+.result-recommendation {
+    color: #374151;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}
+
+.rules-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.rules-list {
+    list-style: none;
+    padding: 0;
+}
+
+.rule-item {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 6px;
+    border-left: 4px solid #f59e0b;
+}
+
+.rule-name {
+    font-weight: 600;
+    color: #d97706;
+    margin-bottom: 0.25rem;
+}
+
+.rule-description {
+    color: #374151;
+    line-height: 1.5;
+}
+
+/* Mensaje de advertencia para módulo psicológico */
+.warning-banner {
+    background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+    border: 2px solid #f59e0b;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.warning-banner p {
+    color: #92400e;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Mensaje de no resultados */
+.no-results {
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    border: 2px solid #ef4444;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    color: #991b1b;
+}
+
+/* Responsive design para módulos */
+@media (max-width: 768px) {
+    .module-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .module-title {
+        font-size: 1.5rem;
+    }
+    
+    .form-radio-group {
+        flex-direction: column;
+    }
+    
+    .form-radio-label {
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .module-container {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+    
+    .module-title {
+        font-size: 1.3rem;
+    }
+    
+    .results-container {
+        padding: 1rem;
+    }
+}
+
+/* Estados de loading */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #1e3a8a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.btn.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.875rem;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversión - Sistemas Expertos Web</title>
+    <link rel="stylesheet" href="../css/modulos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Sistemas Expertos Web</h1>
+            <p class="subtitle">Plataforma de Inteligencia Artificial — Expertos Inteligentes S.A.</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="module-container">
+            <a href="../index.html" class="back-link">Volver al menú</a>
+            
+            <div class="module-header">
+                <h2 class="module-title">💰 Inversión</h2>
+                <p class="module-subtitle">Recibe asesoramiento financiero personalizado según tu perfil de riesgo</p>
+            </div>
+
+            <form id="form-inversion" class="expert-form">
+                <div class="form-group">
+                    <label class="form-label" for="capital">¿Capital disponible para invertir?</label>
+                    <select id="capital" name="capital" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="bajo">Bajo (menos de $5 millones)</option>
+                        <option value="medio">Medio ($5-20 millones)</option>
+                        <option value="alto">Alto (más de $20 millones)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">¿Perfil de inversor?</label>
+                    <div class="form-radio-group">
+                        <label class="form-radio-label">
+                            <input type="radio" name="perfil" value="conservador" required>
+                            <span>Conservador</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="perfil" value="moderado" required>
+                            <span>Moderado</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="perfil" value="agresivo" required>
+                            <span>Agresivo</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="horizonte">¿Horizonte de tiempo?</label>
+                    <select id="horizonte" name="horizonte" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="corto">Corto plazo (menos de 1 año)</option>
+                        <option value="mediano">Mediano plazo (1-5 años)</option>
+                        <option value="largo">Largo plazo (más de 5 años)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="conocimiento">¿Nivel de conocimiento financiero?</label>
+                    <select id="conocimiento" name="conocimiento" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="bajo">Bajo</option>
+                        <option value="medio">Medio</option>
+                        <option value="alto">Alto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="objetivo">¿Objetivo principal?</label>
+                    <select id="objetivo" name="objetivo" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="ahorro">Ahorro seguro</option>
+                        <option value="crecimiento">Crecimiento moderado</option>
+                        <option value="especulación">Especulación/alto rendimiento</option>
+                    </select>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-primary">Ejecutar Sistema Experto</button>
+                </div>
+            </form>
+
+            <div id="resultados" class="results-container">
+                <h3 class="result-title">Recomendaciones de Inversión</h3>
+                
+                <div class="result-diagnosis">
+                    <strong id="diagnostico">Recomendación:</strong>
+                    <p id="recomendacion" class="result-recommendation"></p>
+                </div>
+
+                <h4 class="rules-title">Reglas Activadas</h4>
+                <ul id="reglas-activadas" class="rules-list">
+                    <!-- Las reglas se insertarán aquí dinámicamente -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Expertos Inteligentes S.A. | Curso de Inteligencia Artificial | Universidad Manuela Beltrán</p>
+        </div>
+    </footer>
+
+    <script src="../js/inversion.js"></script>
+</body>
+</html>

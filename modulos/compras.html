@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras Inteligentes - Sistemas Expertos Web</title>
+    <link rel="stylesheet" href="../css/modulos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Sistemas Expertos Web</h1>
+            <p class="subtitle">Plataforma de Inteligencia Artificial — Expertos Inteligentes S.A.</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="module-container">
+            <a href="../index.html" class="back-link">Volver al menú</a>
+            
+            <div class="module-header">
+                <h2 class="module-title">🛒 Compras Inteligentes</h2>
+                <p class="module-subtitle">Toma decisiones de compra informadas basadas en tus preferencias</p>
+            </div>
+
+            <form id="form-compras" class="expert-form">
+                <div class="form-group">
+                    <label class="form-label" for="categoria">¿Categoría del producto?</label>
+                    <select id="categoria" name="categoria" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="tecnología">Tecnología</option>
+                        <option value="hogar">Hogar</option>
+                        <option value="ropa">Ropa</option>
+                        <option value="alimentación">Alimentación</option>
+                        <option value="salud">Salud</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="presupuesto">¿Nivel de presupuesto?</label>
+                    <select id="presupuesto" name="presupuesto" class="form-select" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="bajo">Bajo</option>
+                        <option value="medio">Medio</option>
+                        <option value="alto">Alto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">¿Nivel de urgencia?</label>
+                    <div class="form-radio-group">
+                        <label class="form-radio-label">
+                            <input type="radio" name="urgencia" value="alta" required>
+                            <span>Alta</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="urgencia" value="media" required>
+                            <span>Media</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="urgencia" value="baja" required>
+                            <span>Baja</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">¿Factor de decisión prioritario?</label>
+                    <div class="form-radio-group">
+                        <label class="form-radio-label">
+                            <input type="radio" name="prioridad" value="precio" required>
+                            <span>Precio</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="prioridad" value="calidad" required>
+                            <span>Calidad</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="prioridad" value="marca" required>
+                            <span>Marca</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">¿Frecuencia de compra?</label>
+                    <div class="form-radio-group">
+                        <label class="form-radio-label">
+                            <input type="radio" name="frecuencia" value="diaria" required>
+                            <span>Diaria</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="frecuencia" value="ocasional" required>
+                            <span>Ocasional</span>
+                        </label>
+                        <label class="form-radio-label">
+                            <input type="radio" name="frecuencia" value="esporádica" required>
+                            <span>Esporádica</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-primary">Ejecutar Sistema Experto</button>
+                </div>
+            </form>
+
+            <div id="resultados" class="results-container">
+                <h3 class="result-title">Recomendaciones de Compra</h3>
+                
+                <div class="result-diagnosis">
+                    <strong id="diagnostico">Estrategia recomendada:</strong>
+                    <p id="recomendacion" class="result-recommendation"></p>
+                </div>
+
+                <h4 class="rules-title">Reglas Activadas</h4>
+                <ul id="reglas-activadas" class="rules-list">
+                    <!-- Las reglas se insertarán aquí dinámicamente -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Expertos Inteligentes S.A. | Curso de Inteligencia Artificial | Universidad Manuela Beltrán</p>
+        </div>
+    </footer>
+
+    <script src="../js/compras.js"></script>
+</body>
+</html>
