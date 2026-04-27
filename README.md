@@ -87,7 +87,7 @@ sistemas-expertos-web/
 ## Autor
 
 **Duvan Obando**  
-Estudiante de Ingeniería/Computación  
+Estudiante de Ingeniería de Software 
 Universidad Manuela Beltrán
 
 ## Curso
