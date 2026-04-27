@@ -1,6 +1,7 @@
 # Sistemas Expertos Web
 
 ## Plataforma de Inteligencia Artificial — Expertos Inteligentes S.A.
+https://sistemas-expertos-web-ing-duvanobando.netlify.app/
 
 Plataforma web interactiva de sistemas expertos que implementa motores de inferencia basados en reglas de producción con encadenamiento hacia adelante. Cada módulo proporciona recomendaciones personalizadas y explicables en diferentes dominios de aplicación.
 
